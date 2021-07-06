@@ -1,0 +1,9 @@
+#container{
+  margin:auto;
+  width: 70%;
+
+}
+.page-title{
+  text-align: center;
+  font-size: 5em;
+}

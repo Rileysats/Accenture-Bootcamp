@@ -14,7 +14,7 @@ class App extends React.Component{
   return (
     <>
     <NavBar/>
-    <div>
+    <div id="container">
     <Route exact path="/" component={Main}/>
     <Route exact path="/find" component={Find}/>
     <Route exact path="/bookings" component={Bookings}/>
