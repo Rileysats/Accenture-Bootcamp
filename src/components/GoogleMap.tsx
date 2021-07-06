@@ -1,46 +1,48 @@
 import React from 'react';
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 import './styles/GoogleMap.css';
+import { Button } from 'react-bootstrap';
 import '../App.css';
 
 
-
-
-class Map extends React.Component<{}, { isOpen: boolean,openInfoWindowMarkerId: string }>{
+class Map extends React.Component<{}, { isOpen: boolean,openInfoWindowMarkerId: string, center:any }>{
   constructor(props: any) {
     super(props);
 
     this.state = {
       isOpen: false,
-      openInfoWindowMarkerId: ''
+      openInfoWindowMarkerId: '',
+      center:{
+      lat: -34.9206,
+  lng: 138.6062
+    }
     };
 
   }
   onClick = (id: any) => {
-    this.setState({
-        openInfoWindowMarkerId: id,
+    if(this.state.isOpen === true){
+    this.setState({ 
+        openInfoWindowMarkerId: '',
         isOpen: !this.state.isOpen
     });
+    }
+    else{
+      this.setState({
+        openInfoWindowMarkerId: id,
+        isOpen: !this.state.isOpen
+    }); 
+    }
+    
     
   }
-  // mouseOut = (id: any) => {
-  //   this.setState({
-  //       isOpen:false
-  //   });
-  // }
-  // onClick = (id) => {
-    
-  // }
+
   render(){
     const containerStyle = {
   width: '90rem',
   height: '60rem'
 };
 
-const center = {
-  lat: -34.9206,
-  lng: 138.6062
-};
+
 const positions = [
   {
     LatLng:[{
@@ -95,7 +97,7 @@ const positions = [
       >
         <GoogleMap
           mapContainerStyle={containerStyle}
-          center={center}
+          center={this.state.center}
           zoom={12}
           id="map"
         >
@@ -116,8 +118,14 @@ const positions = [
       
       </LoadScript>
       </div>
-      <div>
-
+      <div id="alert-in">
+        <div className="alert-text">
+          ALERT: you are currently viewing this site as a guest. Please create an account or log in to access booking and eligibility information
+          </div><Button variant="secondary" size="lg" className="alert-button">Log In</Button>
+      </div>
+      <div id="alert-out"><div  className="alert-text">
+        ALERT: based on your age, you are ineligible to recieve a COVID19 vaccine at this time. Please contact your GP, or call the hotline if you require more information
+        </div><Button variant="secondary">Call</Button>
       </div>
       
    

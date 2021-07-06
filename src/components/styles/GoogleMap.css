@@ -6,3 +6,29 @@
   width:60%;
   height:60%;
 }
+#alert-in{
+  width:90rem;
+  /* display: inline; */
+  margin:auto;
+  background-color: chartreuse;
+  
+}
+#alert-out{
+  
+    background-color: coral;
+  width:90rem;
+  margin:auto;
+  visibility: hidden;
+}
+.alert-button{
+  
+  width:30%;
+  
+}
+.alert-text{
+  font-size: 2em;
+  width:70%;
+  /* float: left; */
+  text-align: left;
+  
+}

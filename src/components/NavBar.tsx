@@ -6,6 +6,7 @@ import './styles/NavBar.css';
 class NavBar extends React.Component{
   render(){
     return (
+      // style={{"backgroundColor":"red"}} 
     <Navbar bg="dark" variant="dark" expand="xl" collapseOnSelect>
     <Navbar.Brand href="/" id="logo-left">COVID Vaccine Hub</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
