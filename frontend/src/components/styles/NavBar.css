@@ -1,0 +1,15 @@
+.bg-color{
+
+}
+#nav-right{
+  font-size: 2vmin;
+  margin-right: 10px;
+}
+#logo-left{
+  font-size: 2vmin;
+  margin-left: 10px;
+}
+.nav-form{
+  display: flex;
+  flex-flow: row wrap;
+}
