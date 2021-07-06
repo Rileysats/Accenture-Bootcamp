@@ -4,7 +4,7 @@ class Find extends React.Component{
   render(){
   return (
     <>
-    <h1>tesst</h1>
+    <h1>Find</h1>
     </>
   );
 }

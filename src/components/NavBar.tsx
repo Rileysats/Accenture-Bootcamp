@@ -12,7 +12,7 @@ class NavBar extends React.Component{
     <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="ms-auto" id="nav-right">
       <Nav.Link href="find">Find a clinic</Nav.Link>  
-      <Nav.Link href="booking">My Bookings</Nav.Link>
+      <Nav.Link href="bookings">My Bookings</Nav.Link>
       <Nav.Link href="stats">Statistics</Nav.Link>
       <Nav.Link href="account">Account</Nav.Link>
     </Nav>
