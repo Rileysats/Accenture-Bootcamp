@@ -1,24 +1,24 @@
 #map-container{
   margin:auto;
+  padding-top:3em;
 }
 #map{
   margin:auto;
-  width:60%;
-  height:60%;
+ 
 }
 #alert-in{
-  width:90rem;
+  width:80%;
   /* display: inline; */
   margin:auto;
-  background-color: chartreuse;
+  background-color: #77DE7C;
   
 }
 #alert-out{
   
-    background-color: coral;
-  width:90rem;
+    background-color: #D1922E;
+  width:80%;
   margin:auto;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 .alert-button{
   
@@ -28,7 +28,24 @@
 .alert-text{
   font-size: 2em;
   width:70%;
-  /* float: left; */
   text-align: left;
   
+}
+#marker-title{
+  font-size: 2rem;
+  font-weight: bold;
+}
+#wait-time-text{
+  color:gray;
+  text-align: center;
+  font-size: 1rem;
+}
+#wait-time{
+  text-align: center;
+  color:orange;
+  font-size: 1.5rem;
+}
+#book-button{
+  margin-left:auto;
+  margin-right:auto;
 }
