@@ -1,15 +1,23 @@
 {
-  "dev": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-accenturebootcamp-dev-100725-authRole",
-      "UnauthRoleArn": "arn:aws:iam::946634707624:role/amplify-accenturebootcamp-dev-100725-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::946634707624:role/amplify-accenturebootcamp-dev-100725-authRole",
-      "Region": "ap-southeast-1",
-      "DeploymentBucketName": "amplify-accenturebootcamp-dev-100725-deployment",
-      "UnauthRoleName": "amplify-accenturebootcamp-dev-100725-unauthRole",
-      "StackName": "amplify-accenturebootcamp-dev-100725",
-      "StackId": "arn:aws:cloudformation:ap-southeast-1:946634707624:stack/amplify-accenturebootcamp-dev-100725/84e40a00-debb-11eb-8ddf-0af9b884fdba",
-      "AmplifyAppId": "d39gmu2q68higy"
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-accenturebootcamp-dev-100725-authRole",
+            "UnauthRoleArn": "arn:aws:iam::946634707624:role/amplify-accenturebootcamp-dev-100725-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::946634707624:role/amplify-accenturebootcamp-dev-100725-authRole",
+            "Region": "ap-southeast-1",
+            "DeploymentBucketName": "amplify-accenturebootcamp-dev-100725-deployment",
+            "UnauthRoleName": "amplify-accenturebootcamp-dev-100725-unauthRole",
+            "StackName": "amplify-accenturebootcamp-dev-100725",
+            "StackId": "arn:aws:cloudformation:ap-southeast-1:946634707624:stack/amplify-accenturebootcamp-dev-100725/84e40a00-debb-11eb-8ddf-0af9b884fdba",
+            "AmplifyAppId": "d39gmu2q68higy"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d39gmu2q68higy",
+                    "type": "manual"
+                }
+            }
+        }
     }
-  }
 }
