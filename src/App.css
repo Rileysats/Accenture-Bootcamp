@@ -1,0 +1,15 @@
+#container{
+  margin:auto;
+  height: 100vh;
+  width: 70%;
+  background-color: white;
+  box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.2), -12px 0 8px -4px rgba(31, 73, 125, 0.2);
+}
+.page-title{
+  text-align: center;
+  font-size: 5em;
+}
+#background{
+  height: 100vh;
+  background-color: #F7F7F7;
+}

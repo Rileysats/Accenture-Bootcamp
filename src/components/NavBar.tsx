@@ -1,29 +1,63 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import PageTitle from './PageTitle';
 import { Navbar, Nav, Form,FormControl,Button } from 'react-bootstrap';
 import './styles/NavBar.css';
+import title from './img/vaxhub_white.png';
+class NavBar extends React.Component<{}, {url:string[],pageName: string}>{
+  constructor(props: any) {
+    super(props);
 
-class NavBar extends React.Component{
+    this.state = {
+      url: window.location.href.split('/'),
+      pageName: ""
+    };
+  }
+
+  componentDidMount = () => {
+    if (this.state.url[this.state.url.length-1]=== ''){
+      this.setState({
+        pageName:"Find a clinic"
+      })
+    }
+    else if (this.state.url[this.state.url.length-1]=== 'stats'){
+      this.setState({
+        pageName:"Statistics"
+      })
+    }
+    else if (this.state.url[this.state.url.length-1]=== 'account'){
+      this.setState({
+        pageName:"Account"
+      })
+    }
+  }
+
   render(){
     return (
-    <Navbar bg="dark" variant="dark" expand="xl" collapseOnSelect>
-    <Navbar.Brand href="/" id="logo-left">COVID Vaccine Hub</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="ms-auto" id="nav-right">
-      <Nav.Link href="find">Find a clinic</Nav.Link>  
-      <Nav.Link href="bookings">My Bookings</Nav.Link>
-      <Nav.Link href="stats">Statistics</Nav.Link>
-      <Nav.Link href="account">Account</Nav.Link>
-    </Nav>
-    <Form id="nav-right" className='d-flex'>
-      <FormControl type="text" placeholder="Enter clinic" size="lg"/>
-      <Button variant="secondary">Search</Button>
-    </Form>
-  </Navbar.Collapse>
-</Navbar>
-  
-    
+      <>
+        <Navbar style={{"backgroundColor":"#173668"}} expand="lg" variant="dark" collapseOnSelect sticky="top">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+        <div className="d-flex flex-column" style={{flexGrow: 1}}>
+          <div className="d-flex">
+            <Navbar.Brand href="/" id="logo-left">
+              <img src={title} alt="COVID Vaccine Hub"  className="brand"/>
+            </Navbar.Brand>
+              <Nav className="ms-auto" id="nav-right">
+              <Nav.Link id="nav-button" href="bookings">My Bookings</Nav.Link> 
+              <Nav.Link id="nav-button" href="stats">Statistics</Nav.Link>
+              <Nav.Link style={{paddingLeft:"20px"}} href="account">Account</Nav.Link>
+            </Nav>
+            <Form id="nav-right" className='d-flex'>
+              <FormControl type="text" placeholder="Enter clinic" size="lg"/>
+              <Button variant="secondary">Search</Button>
+            </Form>
+          </div>
+          <PageTitle name={this.state.pageName}/>s 
+        </div>
+        </Navbar.Collapse>
+        </Navbar>
+    </>
     );
   }
 }
