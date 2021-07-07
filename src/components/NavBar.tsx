@@ -39,7 +39,7 @@ class NavBar extends React.Component<{}, {url:string[],pageName: string}>{
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
         <div className="d-flex flex-column" style={{flexGrow: 1}}>
-          <div className="d-flex">
+          <div className="d-flex" style={{height:"3em"}}>
             <Navbar.Brand href="/" id="logo-left">
               <img src={title} alt="COVID Vaccine Hub"  className="brand"/>
             </Navbar.Brand>
@@ -48,12 +48,9 @@ class NavBar extends React.Component<{}, {url:string[],pageName: string}>{
               <Nav.Link id="nav-button" href="stats">Statistics</Nav.Link>
               <Nav.Link style={{paddingLeft:"20px"}} href="account">Account</Nav.Link>
             </Nav>
-            <Form id="nav-right" className='d-flex'>
-              <FormControl type="text" placeholder="Enter clinic" size="lg"/>
-              <Button variant="secondary">Search</Button>
-            </Form>
+            <Button variant="custom">Log In</Button>
           </div>
-          <PageTitle name={this.state.pageName}/>s 
+          <PageTitle name={this.state.pageName}/>
         </div>
         </Navbar.Collapse>
         </Navbar>

@@ -52,7 +52,7 @@ class Map extends React.Component<{}, { isOpen: boolean,openInfoWindowMarkerId: 
   render(){
     const containerStyle = {
       width: '80%',
-      height: '60rem'
+      height: '40rem'
     };
 
     const positions = [
