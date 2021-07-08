@@ -30,6 +30,11 @@ class NavBar extends React.Component<{}, {url:string[],pageName: string}>{
         pageName:"Account"
       })
     }
+    else if (this.state.url[this.state.url.length-1]=== 'bookings'){
+      this.setState({
+        pageName:"Bookings"
+      })
+    }
   }
 
   render(){

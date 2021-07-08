@@ -3665,6 +3665,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-chartjs-2@^2.5.7":
+  version "2.5.7"
+  resolved "https://registry.yarnpkg.com/@types/react-chartjs-2/-/react-chartjs-2-2.5.7.tgz#b77406f6eb6a9f38438966fb27d8cfb1bb7425d3"
+  integrity sha512-waqYqiNULIVUqaKO7MGUpFmWrVtH7gVPOzqwV4y4zgUyu/JiDwC005PpveO442HKnby9kLgp3t1SB2sld+ACLw==
+  dependencies:
+    react-chartjs-2 "*"
+
 "@types/react-dom@^17.0.0":
   version "17.0.8"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.8.tgz#3180de6d79bf53762001ad854e3ce49f36dd71fc"
@@ -6362,6 +6369,11 @@ charenc@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
   integrity sha1-wKHS86cJLgN3S/qD8UwPxXkKhmc=
+
+chart.js@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-3.4.1.tgz#ff3b2b2a04a37b83618b4a6399a5f87ccc0f1e8a"
+  integrity sha512-0R4mL7WiBcYoazIhrzSYnWcOw6RmrRn7Q4nKZNsBQZCBrlkZKodQbfeojCCo8eETPRCs1ZNTsAcZhIfyhyP61g==
 
 check-types@^11.1.1:
   version "11.1.2"
@@ -14320,6 +14332,13 @@ react-bootstrap@^1.6.1:
     react-transition-group "^4.4.1"
     uncontrollable "^7.2.1"
     warning "^4.0.3"
+
+react-chartjs-2@*, react-chartjs-2@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/react-chartjs-2/-/react-chartjs-2-3.0.3.tgz#9cb1981396f9574afebd29aff4e6df71ed615596"
+  integrity sha512-jOFZKwZ8sMLkddewZ/tToxuu4pYimAvvY5I6uK+hCpSFT16Pvo2bdHhUoZ0X87zu9I+dx2I+JCqaLN6XhmrbDg==
+  dependencies:
+    lodash "^4.17.19"
 
 react-dev-utils@^11.0.3:
   version "11.0.4"
