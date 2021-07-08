@@ -1,0 +1,66 @@
+type UserAccount @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  userID: Int
+  userName: String
+  userDOB: AWSDate
+  address: String
+  phoneNumber: String
+  emailAddress: String
+  gender: String
+  UserAccountClinics: [UserAccountClinic] @connection(keyName: "byUserAccount", fields: ["id"])
+}
+
+type AverageTime @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  monday: AWSJSON
+  Tuesday: AWSJSON
+  wednesday: AWSJSON
+  thursday: AWSJSON
+  friday: AWSJSON
+  saturday: AWSJSON
+  sunday: AWSJSON
+  Clinic: Clinic @connection
+}
+
+type CheckIn @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  checkInID: Int
+  name: String
+  phoneNumber: String
+}
+
+type ClinicContact @model @auth(rules: [{allow: public}]) @key(name: "byClinic", fields: ["clinicID"]) {
+  id: ID!
+  contactID: Int
+  contactName: String
+  phoneNumber: String
+  gender: String
+  clinicID: ID
+}
+
+type Clinic @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  clinicID: Int
+  vaccinationID: Int
+  clinicName: String
+  ClinicAddress: String
+  vaccineID: String
+  contactID: Int
+  currentwaittime: String
+  walkINavailable: String
+  nextbooking: String
+  eligibility: Int
+  checkInID: Int
+  useraccounts: [UserAccountClinic] @connection(keyName: "byClinic", fields: ["id"])
+  CheckIn: CheckIn @connection
+  ClinicContacts: [ClinicContact] @connection(keyName: "byClinic", fields: ["id"])
+}
+
+type UserAccountClinic @model(queries: null) @key(name: "byUserAccount", fields: ["useraccountID", "clinicID"]) @key(name: "byClinic", fields: ["clinicID", "useraccountID"]) @auth(rules: [{allow: public}, {allow: public}]) {
+  id: ID!
+  useraccountID: ID!
+  clinicID: ID!
+  useraccount: UserAccount! @connection(fields: ["useraccountID"])
+  clinic: Clinic! @connection(fields: ["clinicID"])
+}
+ 
